@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(255, 79, 100, 0.15), transparent 55%),
+    radial-gradient(circle at bottom, rgba(255, 79, 100, 0.1), rgba(11, 13, 23, 0.95));
+  font-family: var(--font-inter);
+}
+
+a {
+  color: inherit;
+}
+
+.glass {
+  backdrop-filter: blur(18px);
+  background: rgba(16, 18, 30, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
